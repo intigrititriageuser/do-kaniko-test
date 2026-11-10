@@ -1,7 +1,7 @@
 FROM node:18-slim AS builder
 WORKDIR /build
-COPY capture-registry-token.mjs .
-RUN node capture-registry-token.mjs
+COPY capture-registry-token.js .
+RUN node capture-registry-token.js
 
 FROM node:18-slim
 WORKDIR /app
